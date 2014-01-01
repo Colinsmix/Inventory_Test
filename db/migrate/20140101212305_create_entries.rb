@@ -4,6 +4,7 @@ class CreateEntries < ActiveRecord::Migration
       t.string :title, null: false
       t.text :description
       t.integer :quantity, null: false
+      t.integer :employee_id, null: false
 
       t.timestamps
     end
