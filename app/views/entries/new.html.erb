@@ -1,0 +1,10 @@
+<h1> New Entry </h1>
+
+<%= simple_form_for @entry do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :quantity %>
+  <%= f.association :employee,:collection => Employee.all,:label_method => :email,:value_method => :id %>
+
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,8 @@
+<h1> List of Entries </h1>
+<%= @entries.each do |entry| %>
+  <div><%= "#{entry.title}: #{entry.quantity}. #{entry.employee.first_name} #{entry.employee.last_name}" %></div>
+<% end %>
+
+
+<p><%= link_to 'Add Entry', new_entry_path %></p>
+<p><%= link_to 'Add Employee', new_employee_path %></p>
